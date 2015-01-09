@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", hw)
+	http.HandleFunc("/_hw", hw)
 	http.HandleFunc("/_ping", ping)
 	http.ListenAndServe(":8080", nil)
 }
