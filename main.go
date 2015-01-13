@@ -3,9 +3,16 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"time"
 )
 
 func main() {
+	go serve()
+	time.Sleep(30 * time.Second)
+	return
+}
+
+func serve() {
 	http.HandleFunc("/ping", ping)
 	http.ListenAndServe(":8080", nil)
 }
