@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"time"
+	//"time"
 )
 
 func main() {
-	go serve()
-	time.Sleep(30 * time.Second)
+	//go serve()
+	serve()
+	//time.Sleep(30 * time.Second)
 	return
 }
 
