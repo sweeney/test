@@ -7,17 +7,20 @@ import (
 )
 
 func main() {
-	//go serve()
 	serve()
-	//time.Sleep(30 * time.Second)
 	return
 }
 
 func serve() {
 	http.HandleFunc("/ping", ping)
+	http.HandleFunc("/", hw)
 	http.ListenAndServe(":8080", nil)
 }
 
 func ping(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "pong")
+}
+
+func hw(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "hello world")
 }
