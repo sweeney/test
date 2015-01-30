@@ -1,9 +1,9 @@
 package main
 
 import (
+	_ "expvar"
 	"fmt"
 	"net/http"
-	//"time"
 )
 
 func main() {
